@@ -4,6 +4,12 @@ nelmio_api_doc:
             title: Symfony Assessment
             description: These are the endpoints for my Symfony Assessment
             version: 1.0.0
+        components:
+            securitySchemes:
+                httpBasic:
+                    type: http
+                    scheme: basic
+                    description: 'Admin user for POST, PATCH, DELETE (username: admin, password: set in ADMIN_PASSWORD)'
     areas:
         path_patterns:
             - ^/api(?!/doc$)
